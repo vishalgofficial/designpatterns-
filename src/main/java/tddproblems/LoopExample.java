@@ -1,16 +1,12 @@
 package tddproblems;
 
-class LoopExample {
-    public long addIncremental(long l) {
-        Long sum = 0L;
-        sum = sum + l;
-        return sum;
-    }
+import java.util.Vector;
 
+class LoopExample {
     public static void main(String[] args) {
-        LoopExample adder = new LoopExample();
-        for (long i = 0; i < 1000; i++) {
-            adder.addIncremental(i);
-        }
+        Vector v = new Vector(214444);
+        Vector v1 = new Vector(214744444);
+        Vector v2 = new Vector(214444);
+        System.out.println("Memory Leaks");
     }
 }
