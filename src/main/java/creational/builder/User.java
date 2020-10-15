@@ -33,27 +33,27 @@ public class User {
                 '}';
     }
 
-    public static class UserBuilder {
-        private String name;
-        private String age;
-        private String salary;
+        public static class UserBuilder {
+            private String name;
+            private String age;
+            private String salary;
 
-        public UserBuilder(String name) {
-            this.name = name;
-        }
+            public UserBuilder(String name) {
+                this.name = name;
+            }
 
-        public UserBuilder setAge(String age) {
-            this.age = age;
-            return this;
-        }
+            public UserBuilder setAge(String age) {
+                this.age = age;
+                return this;
+            }
 
-        public UserBuilder setSalary(String salary) {
-            this.salary = salary;
-            return this;
-        }
+            public UserBuilder setSalary(String salary) {
+                this.salary = salary;
+                return this;
+            }
 
-        public User build() {
-            return new User(this);
+            public User build() {
+                return new User(this);
+            }
         }
-    }
 }
