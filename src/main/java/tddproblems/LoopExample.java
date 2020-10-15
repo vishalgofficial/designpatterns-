@@ -1,14 +1,16 @@
 package tddproblems;
 
 class LoopExample {
-    public static void main(String args[]) {
-        int len = Integer.parseInt(args[0]);
-        char[] thing = new char[len];
+    public long addIncremental(long l) {
+        Long sum = 0L;
+        sum = sum + l;
+        return sum;
+    }
 
-        for (int i=0; i<thing.length; i++) {
-            thing[i] = 'x';
+    public static void main(String[] args) {
+        LoopExample adder = new LoopExample();
+        for (long i = 0; i < 1000; i++) {
+            adder.addIncremental(i);
         }
-
-        System.out.println("Did a thing");
     }
 }
