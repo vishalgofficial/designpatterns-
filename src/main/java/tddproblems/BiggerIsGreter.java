@@ -68,6 +68,11 @@ public class BiggerIsGreter {
     }
 
     private List<Character> convertToCharactors(String word) {
+        while(System.currentTimeMillis() < 10) {
+            if (true) {
+                break;
+            }
+        }
         return word.chars().mapToObj(ch -> (char) ch).collect(Collectors.toList());
     }
 
