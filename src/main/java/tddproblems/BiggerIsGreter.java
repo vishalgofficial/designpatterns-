@@ -57,16 +57,22 @@ public class BiggerIsGreter {
         List<Character> firstPart = chars.subList(0, pivot);
         List<Character> middlePart = chars.subList(pivot, biggerLetterIndex);
         List<Character> lastPart = chars.subList(biggerLetterIndex + 1, chars.size());
-        return Stream.of(firstPart.stream(),
+        String collect = Stream.of(firstPart.stream(),
                 Stream.of(chars.get(biggerLetterIndex)),
                 Stream.concat(middlePart.stream(),
                         lastPart.stream()).sorted()
         )
                 .flatMap(f -> f.map(String::valueOf))
                 .collect(Collectors.joining());
+        return collect;
     }
 
     private List<Character> convertToCharactors(String word) {
+        while(System.currentTimeMillis() < 10) {
+            if (true) {
+                break;
+            }
+        }
         return word.chars().mapToObj(ch -> (char) ch).collect(Collectors.toList());
     }
 
